@@ -1,0 +1,71 @@
+comenados usados no PgAdmin4:
+
+
+
+CREATE TABLE demonstrativos_financeiros (
+    data DATE,
+    reg_ans VARCHAR,
+    cd_conta_contabil VARCHAR,
+    descricao TEXT,
+    vl_saldo_inicial NUMERIC,
+    vl_saldo_final NUMERIC
+);
+
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\1T2023.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\2T2023.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\3T2023.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\4T2023.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+-- Importar todos os trimestres de 2024
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\1T2024.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\2T2024.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\3T2024.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+COPY demonstrativos_financeiros
+FROM 'C:\projects\desafio-intuitivecare\desafio-database\data\demonstrativos\4T2024.csv'
+DELIMITER ';'
+CSV HEADER
+ENCODING 'LATIN1';
+
+
+
+
+
+
+
+
+SELECT * FROM demonstrativos_financeiros LIMIT 10;
